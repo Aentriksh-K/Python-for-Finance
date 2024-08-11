@@ -9,7 +9,7 @@ df = pd.DataFrame(raw_data)
 adj_cl = df["Adj Close"]
 
 for i in ticker:
-    adj_cl[ i + " Return"] =  adj_cl[i]/adj_cl[i].shift(1) - 1 
+    adj_cl[ i + " Return"] =  (adj_cl[i]/adj_cl[i].shift(1) - 1 )
 adj_cl.dropna(inplace = True)
 
 ret_adj_cl = adj_cl.iloc[:,10:] # choose all column of last 10 position 
