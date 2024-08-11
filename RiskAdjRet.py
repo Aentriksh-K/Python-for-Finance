@@ -15,10 +15,10 @@ return1 = []
 risk1 = []
 for i in col:
     CAGR_Mean = adj_cl[i].mean()  # calculatin CAGR
-    CAGR = ((CAGR_Mean + 1)**250 - 1) * 100   # number of trading days is 250 
+    CAGR = ((CAGR_Mean + 1)**250 - 1) * 100   # number of trading days are 250 
     return1.append(CAGR)
     # calculating risk (Standard deviation) 
-    risk = (adj_cl[i].std() * np.sqrt(250)) * 100   # number of trading days is 250 
+    risk = (adj_cl[i].std() * np.sqrt(250)) * 100   # number of trading days are 250 
     risk1.append(risk)
 
 return_risk = pd.DataFrame(index = ticker)
